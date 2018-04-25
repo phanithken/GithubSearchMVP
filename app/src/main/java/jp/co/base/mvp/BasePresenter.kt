@@ -8,7 +8,7 @@ import java.lang.ref.WeakReference
 /**
  * Created by kit on 4/25/18.
  */
-class BasePresenter<V: BaseView> constructor(var disposable: CompositeDisposable, var scheduler: SchedulerProvider) : Presenter<V> {
+open class BasePresenter<V: BaseView> constructor(var disposable: CompositeDisposable, var scheduler: SchedulerProvider) : Presenter<V> {
 
     private var weakReference: WeakReference<V>? = null
 
